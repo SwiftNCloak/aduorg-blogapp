@@ -6,8 +6,8 @@
     display: flex;
     flex-direction: row;
     
-    color: #CFDDE8;
-    background-color: #023E8A;
+    color: #202020;
+    background-color: #EDEDED;
 }
 
 
@@ -16,7 +16,7 @@
 }
 
 .login_box {
-    background-color: #023E8A;
+    background-color: #EDEDED;
     padding: 50px;
 
     width: 100%;
@@ -46,6 +46,8 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    margin-bottom: 50px;
 }
 
 .helper {
@@ -73,8 +75,8 @@
     gap: 40px;
 }
 
-.login_quote {
-    color: #F9BA21;
+.register_quote {
+    color: #032D61;
     font-family: 'Inter', sans-serif;
     font-size: 60px;
     font-style: normal;

@@ -7,7 +7,7 @@ import logo from '../../public/logo_aduOrg.png'
 import Image from 'next/image';
 import Link from 'next/link'
 
-export default function Navbar() {
+export default function Login() {
     return (
         <div className={style.container}>
 
@@ -34,7 +34,7 @@ export default function Navbar() {
                 <form className={style.form_design}>
                     
                 <div className={style.tf_box}>
-                        <TextField label="Email" variant="filled" type = "email" className = {style.login_tf} />
+                        <TextField label="AdU Email Address" variant="filled" type = "email" className = {style.login_tf} />
                         <TextField label="Password" variant="filled" type = "password" className = {style.login_tf}/>
                     </div>
 
