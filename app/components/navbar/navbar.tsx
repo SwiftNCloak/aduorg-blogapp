@@ -1,6 +1,6 @@
 'use client';
 
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Avatar, Box, Button, Toolbar, Typography } from "@mui/material";
 import Image from "next/image";
 import logo from '../../../public/logo_aduOrg.png'
 import Link from "next/link";
@@ -8,12 +8,17 @@ import Link from "next/link";
 import style from './navbar.module.css'
 import { useRouter } from 'next/navigation'
 
-
+import { useState } from "react";
 
 
 export default function Navbar() {
 
     const router = useRouter()
+    
+    const [user, setUser] = useState(true);
+
+    const username = "LOREM"
+
 
     const loginClick = () => {
         router.push('/login')
@@ -22,6 +27,12 @@ export default function Navbar() {
     const registerClick = () => {
         router.push('/signup')
     }
+
+    const profileClick = () => {
+        router.push('/')
+    }
+
+    
 
     return(
         <Box className = {style.box_design}> 
@@ -53,8 +64,14 @@ export default function Navbar() {
                     </div>
 
                     <div className={style.button_group}>
-                        <Button variant="contained" className = {style.button_design} onClick={loginClick}>Login</Button>
-                        <Button variant="contained" className = {style.button_design} onClick={registerClick}>Register</Button>
+                        {!user ? (
+                            <>
+                                <Button variant="contained" className = {style.button_design} onClick={loginClick}>Login</Button>
+                                <Button variant="contained" className = {style.button_design} onClick={registerClick}>Register</Button>
+                            </>
+                        ) : (
+                            <Button variant="contained" className = {style.button_profile} onClick={profileClick} endIcon ={<Avatar sx = {{width: 25, height: 25}}>L</Avatar>}>Hello {username}</Button>
+                        )}
                     </div>
 
 

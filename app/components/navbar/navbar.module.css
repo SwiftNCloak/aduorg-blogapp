@@ -66,3 +66,12 @@
     
 }
 
+.button_profile {
+    border-radius: 24px;
+    border: solid #426085;
+
+    height: 50px;
+    width: auto;
+    font-weight: bold;
+}
+
