@@ -15,7 +15,7 @@ export default function Navbar() {
 
     const router = useRouter()
     
-    const [user, setUser] = useState(true);
+    const [user, setUser] = useState(false);
 
     const username = "LOREM"
 
@@ -32,7 +32,6 @@ export default function Navbar() {
         router.push('/')
     }
 
-    
 
     return(
         <Box className = {style.box_design}> 
@@ -50,9 +49,9 @@ export default function Navbar() {
                         alt="Logo of Adu Org"
                     />
 
-                        <Link href = '' >
+                        <Link href = '/' >
                             
-                           <Typography sx = {{fontWeight: 'bold', textTransform: 'uppercase'}}>About</Typography>
+                           <Typography sx = {{fontWeight: 'bold', textTransform: 'uppercase'}}>Home</Typography>
                             
                         </Link>
 
@@ -70,7 +69,9 @@ export default function Navbar() {
                                 <Button variant="contained" className = {style.button_design} onClick={registerClick}>Register</Button>
                             </>
                         ) : (
-                            <Button variant="contained" className = {style.button_profile} onClick={profileClick} endIcon ={<Avatar sx = {{width: 25, height: 25}}>L</Avatar>}>Hello {username}</Button>
+                            <Button variant="contained" className = {style.button_profile} onClick={profileClick} endIcon ={<Avatar sx = {{width: 25, height: 25}}>L</Avatar>}>
+                                Hello {username}
+                            </Button>
                         )}
                     </div>
 
