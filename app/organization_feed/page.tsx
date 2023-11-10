@@ -30,6 +30,8 @@ export default function Orgfeed() {
     image: ImagePH
   };
 
+  
+
   return (
     <div className={style.parent}>
       <div>
@@ -98,7 +100,7 @@ export default function Orgfeed() {
             body = {accordionDetails.body}
         />
        <Accord 
-            title = 'Declaration of Principles and Objectives'
+            title = 'Mission and Vision'
             image = {accordionDetails.image}
             body = {accordionDetails.body}
         /> 
