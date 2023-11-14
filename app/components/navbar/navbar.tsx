@@ -55,7 +55,7 @@ export default function Navbar() {
                             
                         </Link>
 
-                        <Link href = '' >
+                        <Link href = '/orgpage' >
                             
                         <Typography sx = {{fontWeight: 'bold', textTransform: 'uppercase'}}>Organizations</Typography>
                             

@@ -25,6 +25,12 @@ export default function Orgfeed() {
                 <div className = {style.header_background}>
                     <Navbar />
                 </div>
+                <Card
+                    title: 'rapport'
+                    author: 'UP student'
+                    votes: '76'
+                    message: 'trapoe ka talaga!!'
+                    />
             </div>
 
             
