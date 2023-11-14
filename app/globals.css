@@ -19,6 +19,8 @@
   }
 }
 
-body {
+html, body {
   background-color: #ffff;
+  height: 100%;
+  
 }

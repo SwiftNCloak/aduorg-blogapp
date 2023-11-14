@@ -69,3 +69,14 @@
     border-radius: 16px;
     font-weight: bold;
 }
+
+.accordion_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+
