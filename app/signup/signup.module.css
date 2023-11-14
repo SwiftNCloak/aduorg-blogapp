@@ -8,6 +8,7 @@
     
     color: #202020;
     background-color: #EDEDED;
+    height: 100%;
 }
 
 
@@ -86,7 +87,7 @@
 
 .logo_box{
 
-    height: 100vh;
+    
     width: 100%;
 
     background-image: url("../../public/loginbg.jpg");

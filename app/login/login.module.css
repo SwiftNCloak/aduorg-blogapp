@@ -1,13 +1,18 @@
 
+
+
 .container {
     margin: 0;
     padding: 0;
+    
 
     display: flex;
     flex-direction: row;
     
     color: #CFDDE8;
     background-color: #023E8A;
+
+    height: 100%;
 }
 
 
@@ -84,7 +89,7 @@
 
 .logo_box{
 
-    height: 100vh;
+    height: auto;
     width: 100%;
 
     background-image: url("../../public/loginbg.jpg");
