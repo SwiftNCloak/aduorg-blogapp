@@ -1,0 +1,24 @@
+.fw_bold {
+    font-weight: 900;
+}
+
+.d_flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.ml {
+    margin-left: 50px;
+}
+
+.cardr {
+    margin: 20px;
+    background-color: rgb(169,180,195);
+    border-radius: 50px;
+    width: 60%;
+}
