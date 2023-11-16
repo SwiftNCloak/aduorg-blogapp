@@ -17,12 +17,12 @@ import { useRouter } from "next/navigation";
 
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar(props: NavbarProps) {
   const router = useRouter();
 
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
 
-  const username = "LOREM";
+  const username = "Norjan";
 
   const loginClick = () => {
     router.push("/login");
@@ -83,7 +83,7 @@ export default function Navbar() {
                 variant="contained"
                 className={style.button_profile}
                 onClick={profileClick}
-                endIcon={<Avatar sx={{ width: 25, height: 25 }}>L</Avatar>}
+                endIcon={<Avatar sx={{ width: 25, height: 25 }}>N</Avatar>}
               >
                 Hello {username}
               </Button>
