@@ -32,19 +32,13 @@ export default function Orgfeed() {
 
   
 
-<<<<<<< HEAD
     return(
+      <div>
         <div className={style.parent}>
             <div>
                 <div className = {style.header_background}>
                     <Navbar />
                 </div>
-                <Card
-                    title: 'rapport'
-                    author: 'UP student'
-                    votes: '76'
-                    message: 'trapoe ka talaga!!'
-                    />
             </div>
 
             
@@ -76,62 +70,9 @@ export default function Orgfeed() {
             <div>
 
             </div>
-=======
-  return (
-    <div className={style.parent}>
-      <div>
-        <div className={style.header_background}>
-          <Navbar />
->>>>>>> 1469f955862bcdad2c6575b26928e96eb803d029
-        </div>
-      </div>
-
-      <div className={style.header_design}>
-        <div className={style.header_imagebox}>
-          <Avatar
-            alt="Remy Sharp"
-            src="../../public/placeholder_orgfeed.png"
-            sx={{ width: 300, height: 300 }}
-            className={style.avatar_design}
-          />
         </div>
 
-        <div className={style.sample_design}>
-          <div>
-            <Typography
-              variant="h4"
-              sx={{ fontWeight: "bold", fontSize: "50px" }}
-            >
-              {header.organization_name}
-            </Typography>
-            <span>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: "bold",
-                  textTransform: "lowercase",
-                  fontSize: "30px",
-                }}
-              >
-                @{header.subtitle}
-              </Typography>
-            </span>
-          </div>
-
-          <div className={style.button_group}>
-            <Button variant="contained" className={style.button_design}>
-              {header.sub_count} Subscribe
-            </Button>
-
-            <IconButton
-              aria-label="notification"
-              className={style.iconbtn_design}
-            >
-              <NotificationsOutlinedIcon />
-            </IconButton>
-          </div>
-        </div>
-      </div>
+      
 
       <div className={style.accordion_div}>
         <Accord 
@@ -151,6 +92,6 @@ export default function Orgfeed() {
             body = {accordionDetails.body}
         /> 
       </div>
-    </div>
+      </div>
   );
 }

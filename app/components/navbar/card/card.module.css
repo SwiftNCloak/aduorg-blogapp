@@ -18,7 +18,8 @@
 
 .cardr {
     margin: 20px;
-    background-color: #BDE0FE;
+    background-color: #A9B4C3;
     border-radius: 50px;
-    width: 60%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
 }

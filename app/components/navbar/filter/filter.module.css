@@ -18,9 +18,10 @@
 
 .cardr {
     margin: 20px;
-    background-color: #003152;
+    background-color: #222;
     border-radius: 10px;
-    width: 60%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.7);
 }
 
 .button {

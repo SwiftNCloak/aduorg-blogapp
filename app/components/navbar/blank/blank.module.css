@@ -5,11 +5,14 @@
 .d_flex {
     display: flex;
     flex-direction: row;
-    gap: 10px;
 }
 
 .col {
     flex-direction: column;
+}
+
+.foot {
+    padding: 20px;
 }
 
 .ml {
@@ -17,8 +20,8 @@
 }
 
 .cardr {
-    margin: 20px;
+    margin: 30px;
     background-color: rgb(169,180,195);
     border-radius: 50px;
-    width: 60%;
+    max-width: 300px;
 }
