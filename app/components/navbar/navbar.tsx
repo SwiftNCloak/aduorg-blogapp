@@ -56,14 +56,12 @@ export default function Navbar() {
               </Typography>
             </Link>
 
-            <Link href="/orgpage">
-              <Typography
-                sx={{ fontWeight: "bold", textTransform: "uppercase" }}
-              >
-                Organizations
-              </Typography>
-            </Link>
-          </div>
+                        <Link href = '/orgpage' >
+                            
+                        <Typography sx = {{fontWeight: 'bold', textTransform: 'uppercase'}}>Organizations</Typography>
+                            
+                        </Link>
+                    </div>
 
           <div className={style.button_group}>
             {!user ? (
