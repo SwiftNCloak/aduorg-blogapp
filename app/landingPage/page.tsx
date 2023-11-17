@@ -19,6 +19,18 @@ export default function Landing() {
             votes={50}
             message="faserawvaowseraowerkaf,asdf"
             />
+            <PostCard
+            title="Get your free I love math T-shirt today"
+            author="ACCOMS"
+            votes={50}
+            message="faserawvaowseraowerkaf,asdf"
+            />
+            <PostCard
+            title="Loremwkrwekrwekascv;kmasfgkmrgr fasdfawe fw"
+            author="asdfwearfawerawerwea"
+            votes={50}
+            message="faserawvaowseraowerkaf,asdf"
+            />
             </div>
         <div className={style.onefourth}>
             <Footer/>

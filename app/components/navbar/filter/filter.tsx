@@ -10,11 +10,8 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 export default function FilterBar(){
     return(
       <Paper className={style.cardr}>
-        <Button className={style.button}><RocketIcon></RocketIcon>Best</Button>
-        <Button className={style.button}><LocalFireDepartmentIcon></LocalFireDepartmentIcon>Hot</Button>
         <Button className={style.button}><NewReleasesIcon></NewReleasesIcon>New</Button>
         <Button className={style.button}><StarHalfIcon></StarHalfIcon>Top</Button>
-        <Button className={style.button}><MoreHorizIcon></MoreHorizIcon></Button>
       </Paper>
       
     )
