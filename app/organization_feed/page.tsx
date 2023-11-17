@@ -13,9 +13,11 @@ import {
   AccordionDetails,
 } from "@mui/material";
 
+import React, { useState } from "react";
+
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import Accord from "../components/navbar/accordion/accordion";
-import ImagePH from '@/public/avatar_placeholder.png';
+import Accord from "../components/accordion/accordion";
+import ImagePH from "@/public/avatar_placeholder.png";
 
 export default function Orgfeed() {
   const header = {
@@ -27,10 +29,8 @@ export default function Orgfeed() {
   const accordionDetails = {
     title: "History",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget mattis enim, non efficitur augue. Quisque nec hendrerit sapien, non aliquam lorem.",
-    image: ImagePH
+    image: ImagePH,
   };
-
-  
 
   return (
     <div className={style.parent}>
@@ -88,22 +88,22 @@ export default function Orgfeed() {
       </div>
 
       <div className={style.accordion_div}>
-        <Accord 
-            title = {accordionDetails.title}
-            image = {accordionDetails.image}
-            body = {accordionDetails.body}
+        <Accord
+          title={accordionDetails.title}
+          image={accordionDetails.image}
+          body={accordionDetails.body}
         />
 
-        <Accord 
-            title = 'Declaration of Principles and Objectives'
-            image = {accordionDetails.image}
-            body = {accordionDetails.body}
+        <Accord
+          title="Declaration of Principles and Objectives"
+          image={accordionDetails.image}
+          body={accordionDetails.body}
         />
-       <Accord 
-            title = 'Mission and Vision'
-            image = {accordionDetails.image}
-            body = {accordionDetails.body}
-        /> 
+        <Accord
+          title="Mission and Vision"
+          image={accordionDetails.image}
+          body={accordionDetails.body}
+        />
       </div>
 
     
