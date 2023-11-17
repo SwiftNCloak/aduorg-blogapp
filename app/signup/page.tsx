@@ -64,6 +64,18 @@ export default function Signup() {
         </h4>
         <form className={style.form_design} onSubmit={handleSubmit}>
           <div className={style.tf_box}>
+
+          <TextField
+              label="Username"
+              variant="filled"
+              type="email"
+              className={style.login_tf}
+              name="username"
+              value={formData.email}
+              onChange={handleChange}
+            />
+
+
             <TextField
               label="AdU Email Address"
               variant="filled"
@@ -79,6 +91,16 @@ export default function Signup() {
               type="password"
               className={style.login_tf}
               name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+
+            <TextField
+              label="Confirm Password"
+              variant="filled"
+              type="password"
+              className={style.login_tf}
+              name="confirmPass"
               value={formData.password}
               onChange={handleChange}
             />
