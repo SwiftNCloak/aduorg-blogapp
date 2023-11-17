@@ -4,7 +4,12 @@ import { Card, CardContent, CardActions, IconButton, Button, Typography, ButtonG
 import style from './blank.module.css'
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
-export default function Footer(props:){
+export default function Footer(props: {
+  title: string 
+  votes: number 
+  author: string
+  message: string }) 
+{
 
     return(
         <Card className={style.cardr}>
