@@ -32,8 +32,6 @@ export default function Orgfeed() {
     image: ImagePH,
   };
 
-  
-
   return (
     <div className={style.parent}>
       <div>
@@ -49,7 +47,7 @@ export default function Orgfeed() {
 
                 <div className={style.header_imagebox}>
 
-                <Avatar alt="Remy Sharp" src= "../../public/placeholder_orgfeed.png" sx = {{width: 300, height: 300}} className = {style.avatar_design}/>
+                <Avatar alt="Remy Sharp" src= "/avatar_placeholder.png" sx = {{width: 300, height: 300}} className = {style.avatar_design}/>
 
                 </div>
 

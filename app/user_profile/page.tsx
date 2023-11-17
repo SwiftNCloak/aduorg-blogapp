@@ -1,7 +1,23 @@
 "use client";
 
-import Typography from "@mui/material";
+import Typography, { Avatar, FormControl, TextField } from "@mui/material";
+import Navbar from "../components/navbar/navbar";
 
 export default function UserProfilePage() {
-  <Typography variant="h6">HELLO NORJAN</Typography>;
+  return(
+    <div>
+      <Navbar />
+      <div>
+        <Avatar ></Avatar>
+      </div>
+
+      <div>
+        <FormControl>
+          <TextField variant="filled"/>
+          <TextField variant="filled"/>
+          <TextField variant="filled"/>
+        </FormControl>
+      </div>
+    </div>
+  )
 }

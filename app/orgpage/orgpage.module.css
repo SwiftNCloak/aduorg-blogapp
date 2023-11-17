@@ -60,6 +60,12 @@
     padding: 50px;
   }
 
+  .bottom_header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .title_bottom {
     font-family: "Inter", sans-serif;
     font-size: 30px;
@@ -68,6 +74,11 @@
     font-weight: 900;
     line-height: normal;
     
+  }
+
+  .searchbar {
+    width: 300px;
+    border-radius: 24px;
   }
   
   

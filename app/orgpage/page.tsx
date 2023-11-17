@@ -1,5 +1,5 @@
 'use client';
-import { Container, Typography, TextField, Button, Grid, Paper } from '@mui/material';
+import { Container, Typography, TextField, Button, Grid, Paper, InputAdornment, FormControl } from '@mui/material';
 import style from './orgpage.module.css';
 import Navbar from "../components/navbar/navbar";
 import Image from 'next/image';
@@ -7,10 +7,12 @@ import logo from "../../public/avatar_placeholder.png";
 import logo2 from "../../public/logo_aduOrg.png"
 import OrgCard from '../components/org_card/orgCard';
 import Link from 'next/link';
-
-
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
 export default function Orgpage() {
+
+
+
   return (
     <div className={style.parent}>
       <div className={style.header_background}>
@@ -31,8 +33,18 @@ export default function Orgpage() {
       </div>
       
       <div className={style.org_page}>
-        <div>
+        <div className={style.bottom_header}>
           <Typography variant='h4' className={style.title_bottom}>ORGANIZATIONS</Typography>
+          
+          <FormControl>
+            <TextField variant="outlined" className={style.searchbar} InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchRoundedIcon />
+              </InputAdornment>
+            ),
+          }}/>
+          </FormControl>
         </div>
         <Grid container rowSpacing={3} columnSpacing={3} className={style.grid_design}>
             <Grid item xs = {3}>
