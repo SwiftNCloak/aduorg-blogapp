@@ -105,6 +105,8 @@ export default function Orgfeed() {
             body = {accordionDetails.body}
         /> 
       </div>
+
+    
     </div>
   );
 }
