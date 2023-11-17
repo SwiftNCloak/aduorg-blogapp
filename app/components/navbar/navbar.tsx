@@ -16,8 +16,13 @@ import style from "./navbar.module.css";
 import { useRouter } from "next/navigation";
 
 import { useState } from "react";
+import { supabase } from "@/app/client";
 
-export default function Navbar(props: NavbarProps) {
+async function getCurrentUser() {
+  const { data, error } = await supabase.auth.getSession();
+}
+
+export default function Navbar() {
   const router = useRouter();
 
   const [user, setUser] = useState(true);
@@ -51,7 +56,7 @@ export default function Navbar(props: NavbarProps) {
               </Typography>
             </Link>
 
-            <Link href="">
+            <Link href="/orgpage">
               <Typography
                 sx={{ fontWeight: "bold", textTransform: "uppercase" }}
               >

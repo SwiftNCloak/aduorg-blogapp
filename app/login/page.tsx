@@ -34,7 +34,6 @@ export default function Login() {
       if (error) {
         alert(error.message);
       } else {
-        alert("Successfully Logged In!");
         // Redirect the user after successful login
         router.push("/organization_feed");
       }

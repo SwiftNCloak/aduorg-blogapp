@@ -16,7 +16,7 @@ import {
 import React, { useState } from "react";
 
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import Accord from "../components/navbar/accordion/accordion";
+import Accord from "../components/accordion/accordion";
 import ImagePH from "@/public/avatar_placeholder.png";
 
 export default function Orgfeed() {
@@ -32,13 +32,11 @@ export default function Orgfeed() {
     image: ImagePH,
   };
 
-  const [user, setUser] = useState(false);
-
   return (
     <div className={style.parent}>
       <div>
         <div className={style.header_background}>
-          <Navbar setUser={setUser} />
+          <Navbar />
         </div>
       </div>
 
