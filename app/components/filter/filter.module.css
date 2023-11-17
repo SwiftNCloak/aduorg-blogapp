@@ -1,37 +1,38 @@
 .fw_bold {
-  font-weight: 900;
+    font-weight: 900;
 }
 
 .d_flex {
-  display: flex;
-  flex-direction: row;
-  gap: 7px;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
 }
 
 .col {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .ml {
-  margin-left: 50px;
+    margin-left: 50px;
 }
 
 .cardr {
-  margin: 20px;
-  background-color: #222;
-  border-radius: 10px;
-  max-width: 1200px;
+    margin: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    max-width: 1200px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.7);
 }
 
 .button {
-  margin: 10px;
-  gap: 7px;
-  border-radius: 20px;
-  color: white;
+    margin: 10px;
+    gap: 7px;
+    border-radius: 20px;
+    color:white;
 }
 
-.button.three {
-  margin: 10px;
-  border-radius: 20px;
-  color: white;
+.button.three{
+    margin: 10px;
+    border-radius: 20px;
+    color:white;
 }

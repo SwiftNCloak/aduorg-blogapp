@@ -81,7 +81,7 @@ export default function Orgfeed() {
         <Accord
           title={accordionDetails.title}
           image={accordionDetails.image}
-          body={accordionDetails.body}
+          body="The AdU GAME started pre-pandemic when the students wanted to have other options for leisure in their college life.  On February 20, 2020, a group of students began the formation of an organization focusing on Esports and Animation by sending a letter of intent to Fr. Vice President for Student Affairs Andrew S. Bayal. Prior events, such as the acceptance of Esports as a recognized event at the 30th Southeast Asian Games in 2019 and the movement of various colleges and universities to create an esports focused organization, have only fueled students' desire for Adamson University to do the same"
         />
 
         <Accord
