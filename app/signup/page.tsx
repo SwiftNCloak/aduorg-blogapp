@@ -1,30 +1,36 @@
-'use client';
+"use client";
 
-import style from './signup.module.css';
-import { TextField, Button } from '@mui/material';
-import logo from '../../public/logo_aduOrg.png';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { supabase } from '../client';
+import style from "./signup.module.css";
+import { TextField, Button, FormControl} from "@mui/material";
+import logo from "../../public/logo_aduOrg.png";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { supabase } from "../client";
 
+import { isEmailValid } from "./validation";
 
 export default function Signup() {
-
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: "",
   });
 
   function handleChange(event) {
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     }));
   }
 
   async function handleSubmit(event) {
-    event.preventDefault(); 
+    event.preventDefault();
+
+    if (!formData.email.toLowerCase().endsWith("@adamson.edu.ph")) {
+      alert("Please use a valid AdU email address ending with @adamson.edu.ph");
+      return;
+    }
+
     try {
       const { data, error } = await supabase.auth.signUp({
         email: formData.email,
@@ -33,9 +39,9 @@ export default function Signup() {
       if (error) {
         alert(error.message);
       } else {
-        alert('Verify your account by checking your email');
+        alert("Verify your account by checking your email");
       }
-    } catch (error) {
+    } catch (error: any) {
       alert(error.message);
     }
   }
@@ -53,9 +59,23 @@ export default function Signup() {
       </div>
       <div className={style.login_box}>
         <Image src={logo} width={200} height={200} alt="Logo of Adu Org" />
-        <h4 className={style.register_quote}>Register to be aware of what’s happening.</h4>
-        <form className={style.form_design} onSubmit={handleSubmit}>
+        <h4 className={style.register_quote}>
+          Register to be aware of what’s happening.
+        </h4>
+        <FormControl className={style.form_design} onSubmit={handleSubmit}>
           <div className={style.tf_box}>
+
+          <TextField
+              label="Username"
+              variant="filled"
+              type="email"
+              className={style.login_tf}
+              name="username"
+              value={formData.email}
+              onChange={handleChange}
+            />
+
+
             <TextField
               label="AdU Email Address"
               variant="filled"
@@ -74,16 +94,30 @@ export default function Signup() {
               value={formData.password}
               onChange={handleChange}
             />
+
+            <TextField
+              label="Confirm Password"
+              variant="filled"
+              type="password"
+              className={style.login_tf}
+              name="confirmPass"
+              value={formData.password}
+              onChange={handleChange}
+            />
           </div>
           <div className={style.button_grp}>
-            <Button type="submit" variant="contained" className={style.button_design}>
+            <Button
+              type="submit"
+              variant="contained"
+              className={style.button_design}
+              onClick={handleSubmit}
+            >
               REGISTER
             </Button>
             <Link href="/login">Already have an Account? Click here.</Link>
           </div>
-        </form>
+        </FormControl>
       </div>
     </div>
   );
 }
-

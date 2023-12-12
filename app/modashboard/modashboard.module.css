@@ -1,0 +1,68 @@
+.dflex {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+.threefourths {
+    flex-direction: column;
+    flex-grow: 7;
+    padding: 3rem 5rem;
+    margin-top: 150px;
+  }
+
+.cardr {
+    margin: 20px;
+    background-color: #BDE0FE;
+    border-radius: 50px;
+    max-width: 600px;
+}
+
+.cardr3 {
+    margin: 20px;
+    background-color: #FCF39F;
+    border-radius: 50px;
+    max-width: 600px;
+}
+
+
+.cardr2 {
+    margin: 20px;
+    background-color: white;
+    border-radius: 50px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.col7 {
+    flex-direction: col;
+}  
+
+.checkbutton{
+    width: 50px; /* Set the width and height to control the size of the button */
+    height: 60px;
+    border-radius: 50%; /* Make it a full circle */
+    background-color: #B7F9A0; /* Replace 'path/to/your/image.jpg' with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire button */
+    background-position: center; /* Center the image within the button */
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.rejectbutton{
+    width: 50px; /* Set the width and height to control the size of the button */
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%; /* Make it a full circle */
+    background-color: #F9A0A0; /* Replace 'path/to/your/image.jpg' with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire button */
+    background-position: center; /* Center the image within the button */
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

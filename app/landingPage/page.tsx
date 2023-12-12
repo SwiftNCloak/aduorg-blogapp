@@ -1,6 +1,7 @@
-import Footer from "../components/navbar/blank/blank"
-import PostCard from "../components/navbar/card/card";
-import FilterBar from "../components/navbar/filter/filter";
+import Footer from "../components/blank/blank";
+import PostCard from "../components/card/card";
+import FilterBar from "../components/filter/filter";
+import Navbar from "../components/navbar/navbar";
 import style from "./landing.module.css";
 
 export default function Landing() {
@@ -19,23 +20,11 @@ export default function Landing() {
             votes={50}
             message="faserawvaowseraowerkaf,asdf"
             />
-            <PostCard
-            title="Get your free I love math T-shirt today"
-            author="ACCOMS"
-            votes={50}
-            message="faserawvaowseraowerkaf,asdf"
-            />
-            <PostCard
-            title="Loremwkrwekrwekascv;kmasfgkmrgr fasdfawe fw"
-            author="asdfwearfawerawerwea"
-            votes={50}
-            message="faserawvaowseraowerkaf,asdf"
-            />
             </div>
         <div className={style.onefourth}>
             <Footer/>
             <Footer/>
         </div>
     </div>
-  )
+  );
 }

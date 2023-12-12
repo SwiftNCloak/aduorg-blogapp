@@ -5,6 +5,5 @@ import style from './user.module.css';
 
 export default function() {
     return(
-
-    )
+ )
 }

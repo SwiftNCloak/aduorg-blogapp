@@ -13,9 +13,11 @@ import {
   AccordionDetails,
 } from "@mui/material";
 
+import React, { useState } from "react";
+
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import Accord from "../components/navbar/accordion/accordion";
-import ImagePH from '@/public/avatar_placeholder.png';
+import Accord from "../components/accordion/accordion";
+import ImagePH from "@/public/avatar_placeholder.png";
 
 export default function Orgfeed() {
   const header = {
@@ -27,12 +29,11 @@ export default function Orgfeed() {
   const accordionDetails = {
     title: "History",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget mattis enim, non efficitur augue. Quisque nec hendrerit sapien, non aliquam lorem.",
-    image: ImagePH
+    image: ImagePH,
   };
 
-  
-
-    return(
+  return (
+    <div className={style.parent}>
       <div>
         <div className={style.parent}>
             <div>
@@ -46,7 +47,7 @@ export default function Orgfeed() {
 
                 <div className={style.header_imagebox}>
 
-                <Avatar alt="Remy Sharp" src= "../../public/placeholder_orgfeed.png" sx = {{width: 300, height: 300}} className = {style.avatar_design}/>
+                <Avatar alt="Remy Sharp" src= "/avatar_placeholder.png" sx = {{width: 300, height: 300}} className = {style.avatar_design}/>
 
                 </div>
 
@@ -75,24 +76,26 @@ export default function Orgfeed() {
       
 
       <div className={style.accordion_div}>
-        <Accord 
-            title = {accordionDetails.title}
-            image = {accordionDetails.image}
-            body = {accordionDetails.body}
+        <Accord
+          title={accordionDetails.title}
+          image={accordionDetails.image}
+          body="The AdU GAME started pre-pandemic when the students wanted to have other options for leisure in their college life.  On February 20, 2020, a group of students began the formation of an organization focusing on Esports and Animation by sending a letter of intent to Fr. Vice President for Student Affairs Andrew S. Bayal. Prior events, such as the acceptance of Esports as a recognized event at the 30th Southeast Asian Games in 2019 and the movement of various colleges and universities to create an esports focused organization, have only fueled students' desire for Adamson University to do the same"
         />
 
-        <Accord 
-            title = 'Declaration of Principles and Objectives'
-            image = {accordionDetails.image}
-            body = {accordionDetails.body}
+        <Accord
+          title="Declaration of Principles and Objectives"
+          image={accordionDetails.image}
+          body={accordionDetails.body}
         />
        <Accord 
             title = 'Mission and Vision'
             image = {accordionDetails.image}
             body = {accordionDetails.body}
         /> 
-        
       </div>
       </div>
+
+    
+    </div>
   );
 }

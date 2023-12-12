@@ -1,17 +1,23 @@
 'use client';
-import { Container, Typography, TextField, Button, Grid, Paper } from '@mui/material';
+import { Container, Typography, TextField, Button, Grid, Paper, InputAdornment, FormControl } from '@mui/material';
 import style from './orgpage.module.css';
 import Navbar from "../components/navbar/navbar";
 import Image from 'next/image';
 import logo from "../../public/avatar_placeholder.png";
 import logo2 from "../../public/logo_aduOrg.png"
+import OrgCard from '../components/org_card/orgCard';
+import Link from 'next/link';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
 export default function Orgpage() {
+
+
+
   return (
     <div className={style.parent}>
       <div className={style.header_background}>
         <Navbar />
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className={style.header_container}>
           <Grid item xs={6} className={style.text_container}>
             <Typography variant="h3" className={style.customHeading} style={{ marginLeft: '150px' }}>
               Find organizations that suit your interests.
@@ -26,48 +32,60 @@ export default function Orgpage() {
         </Grid>
       </div>
       
-      <div className={style.bottom_half}>
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
-            <Typography variant="h2" className={style.customBottom} style={{ marginLeft: '100px' }}>
-             Organizations
-            </Typography>
-          </Grid>
-          <Grid item xs={6} className={style.bottomRight}>
-            <div className={style.inputContainer}>
-              <input type="text"  className={style.textbox} style={{ marginLeft: '270px' }}/>
-              <button className={style.button}>Search</button>
-            </div>
-          </Grid>
-        </Grid>
+      <div className={style.org_page}>
+        <div className={style.bottom_header}>
+          <Typography variant='h4' className={style.title_bottom}>ORGANIZATIONS</Typography>
+          
+          <FormControl>
+            <TextField variant="outlined" className={style.searchbar} InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchRoundedIcon />
+              </InputAdornment>
+            ),
+          }}/>
+          </FormControl>
+        </div>
+        <Grid container rowSpacing={3} columnSpacing={3} className={style.grid_design}>
+            <Grid item xs = {3}>
+              <Link href="/organization_feed">
+                <OrgCard 
+                  Image = {logo} 
+                  ImageHeight = {400} 
+                  ImageWidth={400} 
+                  Title = "Adamson University Guild of Animation Makers and Esports (AdU-GAME)" /> 
+              </Link>
+            </Grid>
 
-        <Grid container spacing={2} className={style.table}>
-          {/* Create a 2x3 table with images and text */}
-          <Grid item xs={4}>
-            <Image src={logo} alt="Image 1" className={style.tableImage} />
-            <p className= {style.orgpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </Grid>
-          <Grid item xs={4}>
-            <Image src={logo} alt="Image 2" className={style.tableImage} />
-            <p className= {style.orgpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </Grid>
-          <Grid item xs={4}>
-            <Image src={logo} alt="Image 3" className={style.tableImage} />
-            <p className= {style.orgpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </Grid>
-          <Grid item xs={4}>
-            <Image src={logo} alt="Image 4" className={style.tableImage} />
-            <p className= {style.orgpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </Grid>
-          <Grid item xs={4}>
-            <Image src={logo} alt="Image 5" className={style.tableImage} />
-            <p className= {style.orgpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </Grid>
-          <Grid item xs={4}>
-            <Image src={logo} alt="Image 6" className={style.tableImage} />
-            <p className= {style.orgpara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </Grid>
-        </Grid>
+            <Grid item xs = {3}>
+              <Link href = "">
+                <OrgCard 
+                  Image = {logo} 
+                  ImageHeight = {400} 
+                  ImageWidth={400} 
+                  Title = "Lorem Ipsum" />
+                </Link>
+            </Grid>
+
+            <Grid item xs = {3}>
+              <OrgCard 
+                Image = "/psau_logo.png" 
+                ImageHeight = {270} 
+                ImageWidth={270} 
+                Title = "Physics Society of Adamson University (PSAU)" />
+            </Grid>
+
+            <Grid item xs = {3}>
+              <OrgCard 
+                Image = "/silip_lente.png" 
+                ImageHeight = {270} 
+                ImageWidth={270} 
+                Title = "Silip@Lente - AdU" />
+            </Grid>
+
+          </Grid>   
+
+       
       </div>
     </div>
   );
