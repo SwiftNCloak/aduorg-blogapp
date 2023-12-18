@@ -38,7 +38,7 @@ export default function Navbar() {
   };
 
   const profileClick = () => {
-    router.push("/");
+    router.push("/user_profile");
   };
 
   return (

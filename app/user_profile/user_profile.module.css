@@ -1,0 +1,98 @@
+
+.formContainer {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  padding: 20px;
+  top: -430px;
+  right: -200px; 
+}
+
+.inputField {
+  margin-bottom: 20px;
+  display: flex;
+  background-color: #D9D9D9;
+  border: none;
+}
+
+.submitButton {
+  margin-top: 20px;
+  position: absolute;
+  right: 15px;
+  background-color: #2B6DBE;
+  text-transform: none;
+  border: 4px solid white;
+  border-radius: 50px;
+  width: 100px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.editButton {
+  margin-top: 20px;
+  background-color: #194377;
+  text-transform: none;
+  position: absolute;
+  right: 125px;
+  border: 4px solid white;
+  border-radius: 30px;
+  width: 100px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.bottom_half {
+  background-color: #EDEDED;
+  height: 85vh;
+}
+
+.header_background {
+  background-image: url('../../public/loginbg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+}
+
+.header_design {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header_imagebox {
+  padding-left: 40px;
+}
+
+.avatar_design {
+  position: relative;
+  top: -60%;
+}
+
+.cover_button {
+  background-color: #194377;
+  position: absolute;
+  bottom: 260px;
+  right: 10px;
+  text-transform: none;
+  border: 2px solid #D9D9D936;
+  border-radius: 10px;
+}
+
+.buttonContainer {
+  position: relative;
+  top: -150px;
+  left: 85px;
+}
+
+.profilepic_button,
+.camera_button {
+  display: block;
+  margin-bottom: 10px;
+  background-color: #032D61;
+  width: 250px;
+  text-transform: none;
+  border: 2px solid black;
+  border-radius: 10px;
+}
