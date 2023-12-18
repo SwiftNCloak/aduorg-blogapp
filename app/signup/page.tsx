@@ -1,7 +1,7 @@
 "use client";
 
 import style from "./signup.module.css";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, FormControl} from "@mui/material";
 import logo from "../../public/logo_aduOrg.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,8 +62,20 @@ export default function Signup() {
         <h4 className={style.register_quote}>
           Register to be aware of what’s happening.
         </h4>
-        <form className={style.form_design} onSubmit={handleSubmit}>
+        <FormControl className={style.form_design} onSubmit={handleSubmit}>
           <div className={style.tf_box}>
+
+          <TextField
+              label="Username"
+              variant="filled"
+              type="email"
+              className={style.login_tf}
+              name="username"
+              value={formData.email}
+              onChange={handleChange}
+            />
+
+
             <TextField
               label="AdU Email Address"
               variant="filled"
@@ -82,6 +94,16 @@ export default function Signup() {
               value={formData.password}
               onChange={handleChange}
             />
+
+            <TextField
+              label="Confirm Password"
+              variant="filled"
+              type="password"
+              className={style.login_tf}
+              name="confirmPass"
+              value={formData.password}
+              onChange={handleChange}
+            />
           </div>
           <div className={style.button_grp}>
             <Button
@@ -94,7 +116,7 @@ export default function Signup() {
             </Button>
             <Link href="/login">Already have an Account? Click here.</Link>
           </div>
-        </form>
+        </FormControl>
       </div>
     </div>
   );

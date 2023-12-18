@@ -1,7 +1,7 @@
 "use client";
 
 import style from "./login.module.css";
-import { TextField, Button, Checkbox, FormControlLabel } from "@mui/material";
+import { TextField, Button, Checkbox, FormControlLabel, FormControl } from "@mui/material";
 import logo from "../../public/logo_aduOrg.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -58,7 +58,7 @@ export default function Login() {
         <h4 className={style.login_quote}>
           GROWING IN ADAMSON IS BETTER WITH ORGANIZATION.
         </h4>
-        <form className={style.form_design} onSubmit={handleSubmit}>
+        <FormControl className={style.form_design} onSubmit={handleSubmit}>
           <div className={style.tf_box}>
             <TextField
               label="AdU Email Address"
@@ -98,7 +98,7 @@ export default function Login() {
             </Button>
             <Link href="/signup">No account? Click here.</Link>
           </div>
-        </form>
+        </FormControl>
       </div>
     </div>
   );

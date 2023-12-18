@@ -1,0 +1,22 @@
+.user-form {
+    margin: 0 auto;
+    width: 500px;
+  }
+  
+  .user-form input,
+  .user-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .user-form button {
+    background-color: #0099ff;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  

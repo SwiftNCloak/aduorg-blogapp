@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+    top: 40%;
+}
+
+.logo_design {
+    font-size: 200px;
+    color: #023e8a;
+}
+
+.text_design {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    color: #023e8a;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+}
+
+.button_design {
+    width: 500px;
+    height: 50px;
+    background-color: #023e8a;
+    font-weight: 900;
+}

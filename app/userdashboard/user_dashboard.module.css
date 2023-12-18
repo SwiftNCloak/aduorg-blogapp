@@ -1,0 +1,45 @@
+.searchbar {
+    width: 300px;
+    border-radius: 24px;
+    margin-top: 200px;
+    margin-right: 20px;
+  }
+
+.dflex {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+.threefourths {
+    flex-direction: column;
+    flex-grow: 7;
+    padding: 3rem 5rem;
+    margin-top: 150px;
+  }
+
+  .cardr {
+    margin: 20px;
+    background-color: #BDE0FE;
+    border-radius: 50px;
+    max-width: 600px;
+}
+
+.cardr3 {
+    margin: 20px;
+    background-color: #FCF39F;
+    border-radius: 50px;
+    max-width: 200px;
+    text-align: center;
+}
+
+
+
+.cardr2 {
+    margin: 20px;
+    background-color: white;
+    border-radius: 50px;
+    max-width: 600px;
+    text-align: center;
+}
+  

@@ -35,63 +35,51 @@ export default function Orgfeed() {
   return (
     <div className={style.parent}>
       <div>
-        <div className={style.header_background}>
-          <Navbar />
+        <div className={style.parent}>
+            <div>
+                <div className = {style.header_background}>
+                    <Navbar />
+                </div>
+            </div>
+
+            
+            <div className={style.header_design}>
+
+                <div className={style.header_imagebox}>
+
+                <Avatar alt="Remy Sharp" src= "/avatar_placeholder.png" sx = {{width: 300, height: 300}} className = {style.avatar_design}/>
+
+                </div>
+
+                <div className={style.sample_design}>
+
+                    <div>
+                        <Typography variant="h4" sx = {{fontWeight: 'bold', fontSize: '50px'}}>{header.organization_name}</Typography>
+                        <span><Typography variant="h6" sx = {{fontWeight: 'bold', textTransform: 'lowercase', fontSize: '30px' }}>@{header.subtitle}</Typography></span>
+                    </div>
+
+                   <div className = {style.button_group}>
+                        <Button variant="contained" className={style.button_design}>{header.sub_count} Subscribe</Button>
+
+                        <IconButton aria-label="notification" className={style.iconbtn_design}>
+                            <NotificationsOutlinedIcon />
+                        </IconButton>
+                   </div>
+                </div>
+            </div>
+
+            <div>
+
+            </div>
         </div>
-      </div>
 
-      <div className={style.header_design}>
-        <div className={style.header_imagebox}>
-          <Avatar
-            alt="Remy Sharp"
-            src="../../public/placeholder_orgfeed.png"
-            sx={{ width: 300, height: 300 }}
-            className={style.avatar_design}
-          />
-        </div>
-
-        <div className={style.sample_design}>
-          <div>
-            <Typography
-              variant="h4"
-              sx={{ fontWeight: "bold", fontSize: "50px" }}
-            >
-              {header.organization_name}
-            </Typography>
-            <span>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: "bold",
-                  textTransform: "lowercase",
-                  fontSize: "30px",
-                }}
-              >
-                @{header.subtitle}
-              </Typography>
-            </span>
-          </div>
-
-          <div className={style.button_group}>
-            <Button variant="contained" className={style.button_design}>
-              {header.sub_count} Subscribe
-            </Button>
-
-            <IconButton
-              aria-label="notification"
-              className={style.iconbtn_design}
-            >
-              <NotificationsOutlinedIcon />
-            </IconButton>
-          </div>
-        </div>
-      </div>
+      
 
       <div className={style.accordion_div}>
         <Accord
           title={accordionDetails.title}
           image={accordionDetails.image}
-          body={accordionDetails.body}
+          body="The AdU GAME started pre-pandemic when the students wanted to have other options for leisure in their college life.  On February 20, 2020, a group of students began the formation of an organization focusing on Esports and Animation by sending a letter of intent to Fr. Vice President for Student Affairs Andrew S. Bayal. Prior events, such as the acceptance of Esports as a recognized event at the 30th Southeast Asian Games in 2019 and the movement of various colleges and universities to create an esports focused organization, have only fueled students' desire for Adamson University to do the same"
         />
 
         <Accord
@@ -99,12 +87,15 @@ export default function Orgfeed() {
           image={accordionDetails.image}
           body={accordionDetails.body}
         />
-        <Accord
-          title="Mission and Vision"
-          image={accordionDetails.image}
-          body={accordionDetails.body}
-        />
+       <Accord 
+            title = 'Mission and Vision'
+            image = {accordionDetails.image}
+            body = {accordionDetails.body}
+        /> 
       </div>
+      </div>
+
+    
     </div>
   );
 }
